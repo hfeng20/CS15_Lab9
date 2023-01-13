@@ -1,5 +1,3 @@
-package lab9;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +18,8 @@ public class LinkedList {
      * TODO:
      * Given the head of a singly linked list where
      * class LLNode {
-     *     LLNode next
-     *     int val
+     * LLNode next
+     * int val
      * }
      * Traverse the linked list iteratively
      *
@@ -34,8 +32,8 @@ public class LinkedList {
     /**
      * Given the head of a singly linked list where
      * class LLNode {
-     *     LLNode next
-     *     int val
+     * LLNode next
+     * int val
      * }
      * Traverse the linked list recursively
      *
@@ -45,13 +43,12 @@ public class LinkedList {
         // TODO: traverse the linked list recursively
     }
 
-
     /**
-     * ____                      _              _ _ _     _
-     * |  _ \  ___    _ __   ___ | |_    ___  __| (_) |_  | |
-     * | | | |/ _ \  | '_ \ / _ \| __|  / _ \/ _` | | __| | |
-     * | |_| | (_) | | | | | (_) | |_  |  __/ (_| | | |_  |_|
-     * |____/ \___/  |_| |_|\___/ \__|  \___|\__,_|_|\__| (_)
+     * ____ _ _ _ _ _
+     * | _ \ ___ _ __ ___ | |_ ___ __| (_) |_ | |
+     * | | | |/ _ \ | '_ \ / _ \| __| / _ \/ _` | | __| | |
+     * | |_| | (_) | | | | | (_) | |_ | __/ (_| | | |_ |_|
+     * |____/ \___/ |_| |_|\___/ \__| \___|\__,_|_|\__| (_)
      * <p>
      * This is support code for the lab. You may look at it if you are interested,
      * but you will not have to change anything to complete your lab.
@@ -59,6 +56,7 @@ public class LinkedList {
 
     /**
      * Bad encapsulation but for the sake of the visualizer :)
+     * 
      * @return the list of nodes in the order they were visited!
      */
     public List<LLNode> getVisited() {

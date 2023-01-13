@@ -1,5 +1,3 @@
-package lab9;
-
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -9,15 +7,14 @@ import javafx.scene.shape.Line;
 import java.util.List;
 
 /**
- * ____                      _              _ _ _     _
- * |  _ \  ___    _ __   ___ | |_    ___  __| (_) |_  | |
- * | | | |/ _ \  | '_ \ / _ \| __|  / _ \/ _` | | __| | |
- * | |_| | (_) | | | | | (_) | |_  |  __/ (_| | | |_  |_|
- * |____/ \___/  |_| |_|\___/ \__|  \___|\__,_|_|\__| (_)
+ * ____ _ _ _ _ _
+ * | _ \ ___ _ __ ___ | |_ ___ __| (_) |_ | |
+ * | | | |/ _ \ | '_ \ / _ \| __| / _ \/ _` | | __| | |
+ * | |_| | (_) | | | | | (_) | |_ | __/ (_| | | |_ |_|
+ * |____/ \___/ |_| |_|\___/ \__| \___|\__,_|_|\__| (_)
  * This is support code for the lab. You may look at it if you are interested,
  * but you will not have to change anything to complete your lab.
  */
-
 
 public class LLNode {
 

@@ -1,5 +1,3 @@
-package lab9;
-
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Insets;
@@ -20,15 +18,14 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * ____                      _              _ _ _     _
- * |  _ \  ___    _ __   ___ | |_    ___  __| (_) |_  | |
- * | | | |/ _ \  | '_ \ / _ \| __|  / _ \/ _` | | __| | |
- * | |_| | (_) | | | | | (_) | |_  |  __/ (_| | | |_  |_|
- * |____/ \___/  |_| |_|\___/ \__|  \___|\__,_|_|\__| (_)
+ * ____ _ _ _ _ _
+ * | _ \ ___ _ __ ___ | |_ ___ __| (_) |_ | |
+ * | | | |/ _ \ | '_ \ / _ \| __| / _ \/ _` | | __| | |
+ * | |_| | (_) | | | | | (_) | |_ | __/ (_| | | |_ |_|
+ * |____/ \___/ |_| |_|\___/ \__| \___|\__,_|_|\__| (_)
  * This is support code for the lab. You may look at it if you are interested,
  * but you will not have to change anything to complete your lab.
  */
-
 
 public class Visualizer {
 
@@ -50,7 +47,6 @@ public class Visualizer {
   private BinaryTree binTree;
   private BSTNode root;
   private List<Integer> bstNodeVals;
-
 
   public Visualizer() {
     this.linkedListTab = new Tab("Linked List");
@@ -138,7 +134,6 @@ public class Visualizer {
     timeline.play();
   }
 
-
   private Node createBinaryTreeContent() {
     BorderPane pane = new BorderPane();
     pane.setPrefSize(Constants.PANEL_W, Constants.PANEL_H);
@@ -163,7 +158,8 @@ public class Visualizer {
 
     TextField searchTarget = new TextField();
     Button visualizeSearch = new Button("Search");
-    visualizeSearch.setOnMouseClicked(e -> this.visualizeBinTreeTraversal(Options.BST_SEARCH, Double.parseDouble(searchTarget.getText())));
+    visualizeSearch.setOnMouseClicked(
+        e -> this.visualizeBinTreeTraversal(Options.BST_SEARCH, Double.parseDouble(searchTarget.getText())));
 
     TextField insertValue = new TextField();
     Button insertBtn = new Button("Insert");
@@ -176,9 +172,8 @@ public class Visualizer {
     });
 
     controlPane.getChildren().addAll(
-            visualizePreorder, visualizeInorder, visualizePostorder,
-            searchTarget, visualizeSearch, insertValue, insertBtn, resetBtn
-    );
+        visualizePreorder, visualizeInorder, visualizePostorder,
+        searchTarget, visualizeSearch, insertValue, insertBtn, resetBtn);
     this.generateInitialTreeVals();
     this.buildBinaryTree();
     return controlPane;
@@ -189,8 +184,7 @@ public class Visualizer {
    */
   private void buildBinaryTree() {
     this.binTreePane.getChildren().clear();
-    this.root =
-            new BSTNode(this.bstNodeVals.get(0), this.binTreePane, Constants.PANEL_W / 2, Constants.PANEL_H / 4);
+    this.root = new BSTNode(this.bstNodeVals.get(0), this.binTreePane, Constants.PANEL_W / 2, Constants.PANEL_H / 4);
     this.binTree = new BinaryTree(root, this.binTreePane);
 
     for (int i = 1; i < this.bstNodeVals.size(); i++) {
@@ -220,14 +214,14 @@ public class Visualizer {
       return;
     }
 
-    this.bstNodeVals.add((int)value);
-    this.binTree.insert((int)value);
+    this.bstNodeVals.add((int) value);
+    this.binTree.insert((int) value);
   }
 
   private void visualizeBinTreeTraversal(Options opt, double target) {
     this.buildBinaryTree();
     boolean isSearch = false;
-    switch(opt) {
+    switch (opt) {
       case BST_PREORDER:
         this.binTree.preOrderTraversal(this.root);
         break;
@@ -265,8 +259,6 @@ public class Visualizer {
     timeline.setCycleCount(visited.size());
     timeline.play();
 
-
   }
-
 
 }
