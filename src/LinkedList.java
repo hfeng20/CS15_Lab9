@@ -26,7 +26,10 @@ public class LinkedList {
      * @param node the LinkedList Node
      */
     public void iterativeTraversal(LLNode node) {
-        // TODO: traverse the linked list iteratively
+        while (node != null) {
+            this.visit(node);
+            node = node.getNext();
+        }
     }
 
     /**
@@ -40,7 +43,11 @@ public class LinkedList {
      * @param node the LinkedList Node
      */
     public void recursiveTraversal(LLNode node) {
-        // TODO: traverse the linked list recursively
+        if (node == null) {
+            return;
+        }
+        this.visit(node);
+        recursiveTraversal(node.getNext());
     }
 
     /**

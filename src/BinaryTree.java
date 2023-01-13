@@ -23,20 +23,44 @@ public class BinaryTree {
   }
 
   public void preOrderTraversal(BSTNode node) {
-    // TODO: Implement Preorder Traversal
+    if (node == null) {
+      return;
+    }
+    this.visit(node);
+    preOrderTraversal(node.getLeft());
+    preOrderTraversal(node.getRight());
   }
 
   public void inOrderTraversal(BSTNode node) {
-    // TODO: Implement Inorder Traversal
+    if (node == null) {
+      return;
+    }
+    preOrderTraversal(node.getLeft());
+    this.visit(node);
+    preOrderTraversal(node.getRight());
   }
 
   public void postOrderTraversal(BSTNode node) {
-    // TODO: Implement Postorder Traversal
+    if (node == null) {
+      return;
+    }
+    preOrderTraversal(node.getLeft());
+    preOrderTraversal(node.getRight());
+    this.visit(node);
   }
 
   public boolean binarySearch(BSTNode node, double target) {
-    // TODO: Implement Binary Search
-    return false;
+    if (node == null) {
+      return false;
+    }
+    this.visit(node);
+    if (node.getValue() == target) {
+      return true;
+    }
+    if (node.getValue() < target) {
+      return binarySearch(node.getRight(), target);
+    }
+    return binarySearch(node.getLeft(), target);
   }
 
   /**
